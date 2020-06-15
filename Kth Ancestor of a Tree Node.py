@@ -1,10 +1,12 @@
-# You are given a tree with n nodes numbered from 0 to n-1 in the form of a parent array where parent[i] is the parent of node i. The root of the tree is node 0.
+# You are given a tree with n nodes numbered from 0 to n-1 in the form of a parent array where parent[i] is the parent of node i. 
 
-# Implement the function getKthAncestor(int node, int k) to return the k-th ancestor of the given node. If there is no such ancestor, return -1.
+# The root of the tree is node 0.
+
+# Implement the function getKthAncestor(int node, int k) to return the k-th ancestor of the given node. 
+
+#If there is no such ancestor, return -1.
 
 # The k-th ancestor of a tree node is the k-th node in the path from that node to the root.
-
-
 
 class TreeAncestor:
 
@@ -33,3 +35,7 @@ class TreeAncestor:
                 node = self.d[node][power]
                 if k == 0:
                     return node
+#--------------------------------------------------------
+# Easy brute force method that runs through each node by node to find the Kth parent will result an O(n^2)
+# time complexity. This is slow while max(n) == 50000. Binary lifting method could improve the complexity to O(nlog(n)) by
+# storing only the 2^k(th) parents for all n nodes.
