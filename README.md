@@ -1,3 +1,3 @@
 # LeetCode
 
-This repository stores some of the interesting hard problem solution from LeetCode as well as some special algorithm
+This repository stores my solutions to some of the interesting problems from LeetCode as well as some special algorithms
