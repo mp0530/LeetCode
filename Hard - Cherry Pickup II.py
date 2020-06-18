@@ -10,9 +10,6 @@
 # Both robots cannot move outside of the grid at any moment.
 # Both robots should reach the bottom row in the grid.
 
-
-
-
 class Solution:
     def cherryPickup(self, grid):
         y = len(grid)
@@ -30,6 +27,7 @@ class Solution:
                                        dp[row+1][a+1][b-1],dp[row+1][a+1][b],dp[row+1][a+1][b+1]) +\
                                        grid[row][a-1] + (grid[row][b-1] if a != b else 0)
         return dp[0][1][-2] 
+
 # Thought: this is an obvious Dynamic Programming problem, but the implement is difficult that makes this question "Hard".
 # There are two robots that affect the total cherry counts, so we have to make a dp[row][robot1][robot2] that records
 # every possibility of cherry counts in a row. For each dp, it is affected by 9 possible counts from the previous row:
