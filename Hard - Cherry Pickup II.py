@@ -33,4 +33,4 @@ class Solution:
 # every possibility of cherry counts in a row. For each dp, it is affected by 9 possible counts from the previous row:
 # [robot1-1:robot1+2]*[robot2-1:robot2+2] is 9. I use bottom-up solution for this and return dp[0][1][-2] which is the robot1
 # at position 0 and robot2 at position -1. I added 2 extra column with large negative numbers to deal with out of bound possiblity.
-# Overall, this is a pretty efficient code.
+# Overall, this is a pretty efficient code. Time complexity is O(9*len(grid)*len(grid[0])^2) or O(9*n*m^2)
