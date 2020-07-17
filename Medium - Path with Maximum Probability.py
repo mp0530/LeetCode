@@ -35,7 +35,7 @@ class Solution:
 
 ### Idea ###   
 # This is a question to find the nearest path. DFS and BFS are the initial thought, but this question is more designed for Dijkstra algorithm as weighted path.
-# Also, there will be recursively multiplying probabilities when navigating nodes. To avoid more error and to increase efficiency, log2 is applied to the probabilities.
+# Also, there will be recursively multiplying probabilities when navigating nodes. To increase accuracy and efficiency, log2 is applied to the probabilities.
 # Because we have to find the maximum probability everytime in order to get the next nearest node, I use heap to make the search time linear.
 
 ### Implement ###
